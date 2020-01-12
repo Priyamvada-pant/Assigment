@@ -1,0 +1,38 @@
+* {
+            box-sizing: border-box;
+        }
+
+        .column {
+            float: left;
+            width: 200px;
+            height: 200px;
+            padding: 5px;
+        }
+
+        .row{
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Clearfix (clear floats) */
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* .size-equal {
+            height: 200px;
+            width: 200%;        } */
+
+        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 500px) {
+            .column {
+                width: 100%;
+            }
+        }
+
+        img:hover {
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+        }
